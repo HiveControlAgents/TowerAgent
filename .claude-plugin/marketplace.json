@@ -1,0 +1,17 @@
+{
+  "name": "toweragent",
+  "owner": {
+    "name": "Isaque Moutta"
+  },
+  "plugins": [
+    {
+      "name": "toweragent",
+      "source": "./",
+      "description": "Prédio 3D dos seus agentes do Claude Code",
+      "version": "0.1.0"
+    }
+  ],
+  "metadata": {
+    "description": "TowerAgent: prédio 3D dos agentes do Claude Code"
+  }
+}

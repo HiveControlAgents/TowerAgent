@@ -1,0 +1,63 @@
+{
+  "description": "Acende no prédio o andar do agente que está trabalhando",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Task|Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/hook.py\" 2>/dev/null || python \"${CLAUDE_PLUGIN_ROOT}/scripts/hook.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Task|Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/hook.py\" 2>/dev/null || python \"${CLAUDE_PLUGIN_ROOT}/scripts/hook.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "Task|Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/hook.py\" 2>/dev/null || python \"${CLAUDE_PLUGIN_ROOT}/scripts/hook.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/hook.py\" 2>/dev/null || python \"${CLAUDE_PLUGIN_ROOT}/scripts/hook.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/hook.py\" 2>/dev/null || python \"${CLAUDE_PLUGIN_ROOT}/scripts/hook.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

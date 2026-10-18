@@ -1,0 +1,10 @@
+{
+  "name": "toweragent",
+  "version": "0.1.0",
+  "description": "Um prédio 3D com um andar para cada agente do Claude Code. Cresce sozinho quando você cria agentes e acende o andar de quem está trabalhando.",
+  "author": {"name": "Isaque Moutta"},
+  "homepage": "https://github.com/HiveControlAgents/TowerAgent",
+  "repository": "https://github.com/HiveControlAgents/TowerAgent",
+  "license": "MIT",
+  "keywords": ["agents", "subagents", "visualization", "3d", "dashboard"]
+}
